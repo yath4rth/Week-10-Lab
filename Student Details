@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+struct Student
+{
+    int age;
+    char name [64];
+    float gpa;
+};
+
+void print_student(struct Student a_student);
+
+int main(void)
+{
+    struct Student student;
+
+	sprintf(student.name, "Jane Doe");
+	student.age = 21;
+	student.gpa = 3.99f;
+
+	print_student(student);
+
+	return 0;
+}
+
+void print_student(struct Student a_student)
+{
+    printf("Name: %s\n", a_student.name);
+    printf("Age: %d\n", a_student.age);
+    printf("GPA: %.2f\n", a_student.gpa);
+    
+}
